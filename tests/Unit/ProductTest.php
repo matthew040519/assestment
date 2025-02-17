@@ -42,4 +42,15 @@ class ProductTest extends TestCase
             'description' => 'This is a test product',
             ]);
         }
+
+        public function testProductByIdApi()
+        {
+            $response = $this->get('http://127.0.0.1:8000/api/getproducts/1');
+            $response->assertJson([
+            'id' => 1,
+            'name' => 'Test Product',
+            'price' => 100,
+            'description' => 'This is a test product',
+            ]);
+        }
 }

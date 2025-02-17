@@ -29,9 +29,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
         Route::get('/getProducts', [ProductsController::class, 'getProducts'])->name('api.getProducts');
         Route::get('/searchProducts', [ProductsController::class, 'searchProducts'])->name('api.searchProducts');
         Route::post('/addProducts', [ProductsController::class, 'addProducts'])->name('api.addProducts');
-        Route::get('/getproducts/{id}', [ProductsController::class, 'getApiProducts'])->name('getApiProducts');
-        Route::post('/updateproduct/{id}', [ProductsController::class, 'updateproduct'])->name('updateproduct');
-        Route::delete('/deleteproduct/{id}', [ProductsController::class, 'deleteproduct'])->name('deleteproduct');
+        Route::get('/getproducts/{id}', [ProductsController::class, 'getApiProducts'])->name('api.getApiProducts');
+        Route::post('/updateproduct/{id}', [ProductsController::class, 'updateproduct'])->name('api.updateproduct');
+        Route::delete('/deleteproduct/{id}', [ProductsController::class, 'deleteproduct'])->name('api.deleteproduct');
         Route::get('/getCategory', [CategoryController::class, 'getCategory'])->name('api.getCategory');
     });
     
